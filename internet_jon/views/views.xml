@@ -1,60 +1,170 @@
+<? version="1.0" encoding="UTF-8"?>
+
 <odoo>
-  <data>
-    <!-- explicit list view definition -->
-    <!--
-    <record model="ir.ui.view" id="internet_jon.list">
-      <field name="name">internetJon list</field>
-      <field name="model">internet_jon.internet_jon</field>
-      <field name="arch" type="xml">
-        <tree>
-          <field name="name"/>
-          <field name="value"/>
-          <field name="value2"/>
-        </tree>
-      </field>
-    </record>
-    -->
+    <data>
 
-    <!-- actions opening views on models -->
-    <!--
-    <record model="ir.actions.act_window" id="internet_jon.action_window">
-      <field name="name">internetJon window</field>
-      <field name="res_model">internet_jon.internet_jon</field>
-      <field name="view_mode">tree,form</field>
-    </record>
-    -->
+        <!-- explicit list view definition -->
+<!-- ======================================================================= -->
+        <record model="ir.ui.view" id="producto_internet_jon_tree_view">
+            <field name="name">producto_uni_jon_tree_view</field>
+            <field name="model">producto.internet_jon</field>
+            <field name="arch" type="xml"></field>
+                <tree>
+                    <field name="codigo" />
+                    <field name="nombre" />
+                    <field name="descripcion" />
+                </tree>
+            </field>
+        </record>
 
-    <!-- server action to the one above -->
-    <!--
-    <record model="ir.actions.server" id="internet_jon.action_server">
-      <field name="name">internetJon server</field>
-      <field name="model_id" ref="model_internet_jon_internet_jon"/>
-      <field name="state">code</field>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": self._name,
-        }
-      </field>
-    </record>
-    -->
+        <record model="ir.ui.view" id="producto_internet_jon_tree_view">
+            <field name="name">producto_internet_jon_tree_view</field>
+            <field name="model">producto.internet_jon</field>
+            <field name="arch" type="xml">
+                <form string="Gestión de una producto">
+                    <sheet>
+                        <group string="Géstion de una producto">
+                            <field name="codigo"/>
+                            <field name="nombre"/>
+                            <field name="descripcion"/>
+                            <field name="pertenece"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
 
-    <!-- Top menu item -->
-    <!--
-    <menuitem name="internetJon" id="internet_jon.menu_root"/>
-    -->
-    <!-- menu categories -->
-    <!--
-    <menuitem name="Menu 1" id="internet_jon.menu_1" parent="internet_jon.menu_root"/>
-    <menuitem name="Menu 2" id="internet_jon.menu_2" parent="internet_jon.menu_root"/>
-    -->
-    <!-- actions -->
-    <!--
-    <menuitem name="List" id="internet_jon.menu_1_list" parent="internet_jon.menu_1"
-              action="internet_jon.action_window"/>
-    <menuitem name="Server to list" id="internet_jon" parent="internet_jon.menu_2"
-              action="internet_jon.action_server"/>
-    -->
-  </data>
+        <record model="ir.ui.view" id="producto_internet_jon_tree_view">
+            <field name="name">producto_internet_jon_tree_view</field>
+            <field name="type"></field>
+            <field name="res_model"></field>
+            <field name="view_mode"></field>
+            <field name="view_type">form</field>
+            <menuitem name="UniversidadJon" id="internet_jon_menu_principal"/>
+            <menuitem name="Producto" id="internet_jon_submenu" paren="internet_jon_menu_principal"/>
+        </record>
+
+<!-- ======================================================================= -->
+
+        <record model="ir.ui.view" id="lote_internet_jon_tree_view">
+            <field name="name">lote_internet_jon_tree_view</field>
+            <field name="model">lote.internet_jon</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="catnum" />
+                    <field name="salida" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="lote_internet_jon_tree_view">
+            <field name="name">lote_internet_jon_tree_view</field>
+            <field name="model">lote.internet_jon</field>
+            <field name="arch" type="xml">
+                <form string="Gestión de un lote">
+                    <sheet>
+                        <group string="Géstion de un lote">
+                            <field name="catnum"/>
+                            <field name="salida"/>
+                            <field name="desc"/>
+                            <field name="tiempo"/>
+                            <field name="productos"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="lote_internet_jon_tree_view">
+            <field name="name">lote_internet_jon_tree_view</field>
+            <field name="type"></field>
+            <field name="res_model"></field>
+            <field name="view_mode"></field>
+            <field name="view_type">form</field>
+            <menuitem name="UniversidadJon" id="internet_jon_menu_principal"/>
+            <menuitem name="Lote" id="internet_jon_submenu" paren="internet_jon_menu_principal"/>
+        </record>
+
+<!-- ====================================================================== -->
+        <record model="ir.ui.view" id="cliente_internet_jon_tree_view">
+            <field name="name">cliente_internet_jon_tree_view</field>
+            <field name="model">cliente.internet_jon</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="usuario" />
+                    <field name="nombre" />
+                    <field name="clave" />
+                </tree>
+            </field>
+        </record>
+
+
+        <record model="ir.ui.view" id="cliente_internet_jon_tree_view">
+            <field name="name">cliente_internet_jon_tree_view</field>
+            <field name="model">cliente.internet_jon</field>
+            <field name="arch" type="xml">
+                <form string="Gestión de una cliente">
+                    <sheet>
+                        <group string="Géstion de una cliente">
+                            <field name="usuario"/>
+                            <field name="nombre"/>
+                            <field name="clave"/>
+                            <field name="email"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="cliente_internet_jon_tree_view">
+            <field name="name">cliente_internet_jon_tree_view</field>
+            <field name="type"></field>
+            <field name="res_model"></field>
+            <field name="view_mode"></field>
+            <field name="view_type">form</field>
+            <menuitem name="UniversidadJon" id="internet_jon_menu_principal"/>
+            <menuitem name="Cliente" id="internet_jon_submenu" paren="internet_jon_menu_principal"/>
+        </record>
+
+<!-- ======================================================================         -->
+
+        <record model="ir.ui.view" id="puja_internet_jon_tree_view">
+            <field name="name">puja_internet_jon_tree_view</field>
+            <field name="model">puja.internet_jon</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="usuario" />
+                    <field name="catnum" />
+                    <field name="dia" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="puja_internet_jon_tree_view">
+            <field name="name">puja_internet_jon_tree_view</field>
+            <field name="model">puja.internet_jon</field>
+            <field name="arch" type="xml">
+                <form string="Gestión de una puja">
+                    <sheet>
+                        <group string="Géstion de una puja">
+                            <field name="usuario"/>
+                            <field name="catnum"/>
+                            <field name="dia"/>
+                            <field name="hora"/>
+                            <field name="cantidad"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="puja_internet_jon_tree_view">
+            <field name="name">puja_internet_jon_tree_view</field>
+            <field name="type"></field>
+            <field name="res_model"></field>
+            <field name="view_mode"></field>
+            <field name="view_type">form</field>
+            <menuitem name="UniversidadJon" id="internet_jon_menu_principal"/>
+            <menuitem name="Puja" id="internet_jon_submenu" paren="internet_jon_menu_principal"/>
+        </record>
+    </data>
 </odoo>

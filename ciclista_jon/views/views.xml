@@ -1,60 +1,168 @@
+<? version="1.0" encoding="UTF-8"?>
+
 <odoo>
-  <data>
-    <!-- explicit list view definition -->
-    <!--
-    <record model="ir.ui.view" id="ciclista_jon.list">
-      <field name="name">ciclistaJon list</field>
-      <field name="model">ciclista_jon.ciclista_jon</field>
-      <field name="arch" type="xml">
-        <tree>
-          <field name="name"/>
-          <field name="value"/>
-          <field name="value2"/>
-        </tree>
-      </field>
-    </record>
-    -->
+    <data>
 
-    <!-- actions opening views on models -->
-    <!--
-    <record model="ir.actions.act_window" id="ciclista_jon.action_window">
-      <field name="name">ciclistaJon window</field>
-      <field name="res_model">ciclista_jon.ciclista_jon</field>
-      <field name="view_mode">tree,form</field>
-    </record>
-    -->
+        <!-- explicit list view definition -->
+<!-- ======================================================================= -->
+        <record model="ir.ui.view" id="ciclista_ciclista_jon_tree_view">
+            <field name="name">ciclista_ciclista_jon_tree_view</field>
+            <field name="model">ciclista.ciclista_jon</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="codigo" />
+                    <field name="nombre" />
+                    <field name="descripcion" />
+                </tree>
+            </field>
+        </record>
 
-    <!-- server action to the one above -->
-    <!--
-    <record model="ir.actions.server" id="ciclista_jon.action_server">
-      <field name="name">ciclistaJon server</field>
-      <field name="model_id" ref="model_ciclista_jon_ciclista_jon"/>
-      <field name="state">code</field>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": self._name,
-        }
-      </field>
-    </record>
-    -->
+        <record model="ir.ui.view" id="ciclista_ciclista_jon_tree_view">
+            <field name="name">ciclista_ciclista_jon_tree_view</field>
+            <field name="model">ciclista.ciclista_jon</field>
+            <field name="arch" type="xml">
+                <form string="Gestión de una ciclista">
+                    <sheet>
+                        <group string="Géstion de una ciclista">
+                            <field name="codigo"/>
+                            <field name="nombre"/>
+                            <field name="descripcion"/>
+                            <field name="pertenece"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
 
-    <!-- Top menu item -->
-    <!--
-    <menuitem name="ciclistaJon" id="ciclista_jon.menu_root"/>
-    -->
-    <!-- menu categories -->
-    <!--
-    <menuitem name="Menu 1" id="ciclista_jon.menu_1" parent="ciclista_jon.menu_root"/>
-    <menuitem name="Menu 2" id="ciclista_jon.menu_2" parent="ciclista_jon.menu_root"/>
-    -->
-    <!-- actions -->
-    <!--
-    <menuitem name="List" id="ciclista_jon.menu_1_list" parent="ciclista_jon.menu_1"
-              action="ciclista_jon.action_window"/>
-    <menuitem name="Server to list" id="ciclista_jon" parent="ciclista_jon.menu_2"
-              action="ciclista_jon.action_server"/>
-    -->
-  </data>
+        <record model="ir.ui.view" id="ciclista_ciclista_jon_tree_view">
+            <field name="name">ciclista_ciclista_jon_tree_view</field>
+            <field name="type"></field>
+            <field name="res_model"></field>
+            <field name="view_mode"></field>
+            <field name="view_type">form</field>
+            <menuitem name="UniversidadJon" id="ciclista_jon_menu_principal"/>
+            <menuitem name="Ciclista" id="ciclista_jon_submenu" paren="ciclista_jon_menu_principal"/>
+        </record>
+
+<!-- ======================================================================= -->
+
+        <record model="ir.ui.view" id="equipo_ciclista_jon_tree_view">
+            <field name="name">equipo_ciclista_jon_tree_view</field>
+            <field name="model">equipo.ciclista_jon</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nombre" />
+                    <field name="nacio" />
+                    <field name="fnac" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="equipo_ciclista_jon_tree_view">
+            <field name="name">equipo_ciclista_jon_tree_view</field>
+            <field name="model">equipo.ciclista_jon</field>
+            <field name="arch" type="xml">
+                <form string="Gestión de un equipo">
+                    <sheet>
+                        <group string="Géstion de un equipo">
+                            <field name="nombre"/>
+                            <field name="nacion"/>
+                            <field name="fnac"/>
+                            <field name="ganador"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="equipo_ciclista_jon_tree_view">
+            <field name="name">equipo_ciclista_jon_tree_view</field>
+            <field name="type"></field>
+            <field name="res_model"></field>
+            <field name="view_mode"></field>
+            <field name="view_type">form</field>
+            <menuitem name="UniversidadJon" id="ciclista_jon_menu_principal"/>
+            <menuitem name="Equipo" id="ciclista_jon_submenu" paren="ciclista_jon_menu_principal"/>
+        </record>
+
+<!-- ====================================================================== -->
+        <record model="ir.ui.view" id="participacion_ciclista_jon_tree_view">
+            <field name="name">participacion_ciclista_jon_tree_view</field>
+            <field name="model">participacion.ciclista_jon</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nombrep" />
+                    <field name="nombree" />
+                    <field name="puesto" />
+                </tree>
+            </field>
+        </record>
+
+
+        <record model="ir.ui.view" id="participacion_ciclista_jon_tree_view">
+            <field name="name">participacion_ciclista_jon_tree_view</field>
+            <field name="model">participacion.ciclista_jon</field>
+            <field name="arch" type="xml">
+                <form string="Gestión de una participacion">
+                    <sheet>
+                        <group string="Géstion de una participacion">
+                            <field name="nombrep"/>
+                            <field name="nombree"/>
+                            <field name="puesto"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="participacion_ciclista_jon_tree_view">
+            <field name="name">participacion_ciclista_jon_tree_view</field>
+            <field name="type"></field>
+            <field name="res_model"></field>
+            <field name="view_mode"></field>
+            <field name="view_type">form</field>
+            <menuitem name="UniversidadJon" id="ciclista_jon_menu_principal"/>
+            <menuitem name="Participacion" id="ciclista_jon_submenu" paren="ciclista_jon_menu_principal"/>
+        </record>
+
+<!-- ======================================================================         -->
+
+        <record model="ir.ui.view" id="plantilla_ciclista_jon_tree_view">
+            <field name="name">plantilla_ciclista_jon_tree_view</field>
+            <field name="model">plantilla.ciclista_jon</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nombrec" />
+                    <field name="nombree" />
+                    <field name="puesto" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="plantilla_ciclista_jon_tree_view">
+            <field name="name">plantilla_ciclista_jon_tree_view</field>
+            <field name="model">plantilla.ciclista_jon</field>
+            <field name="arch" type="xml">
+                <form string="Gestión de una plantilla">
+                    <sheet>
+                        <group string="Géstion de una plantilla">
+                            <field name="nombrec"/>
+                            <field name="nombree"/>
+                            <field name="inicio"/>
+                            <field name="fin"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="plantilla_ciclista_jon_tree_view">
+            <field name="name">plantilla_ciclista_jon_tree_view</field>
+            <field name="type"></field>
+            <field name="res_model"></field>
+            <field name="view_mode"></field>
+            <field name="view_type">form</field>
+            <menuitem name="UniversidadJon" id="ciclista_jon_menu_principal"/>
+            <menuitem name="Plantilla" id="ciclista_jon_submenu" paren="ciclista_jon_menu_principal"/>
+        </record>
+    </data>
 </odoo>
