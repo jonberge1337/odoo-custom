@@ -2,7 +2,7 @@
 
 from odoo import models, fields, api
 
- class persona_uni_jon(models.Model):
+class persona_uni_jon(models.Model):
     _name = 'persona.uni_jon'
 
     pid = fields.Char(string="Identificador", size=10, required=True, help="E,P: estudiante,profesor")
