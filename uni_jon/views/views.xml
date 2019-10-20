@@ -4,7 +4,7 @@
     <data>
 
         <!-- explicit list view definition -->
-
+<!-- ======================================================================= -->
         <record model="ir.ui.view" id="persona_uni_jon_tree_view">
             <field name="name">persona_uni_jon_tree_view</field>
             <field name="model">persona.uni_jon</field>
@@ -34,6 +34,7 @@
                 </form>
             </field>
         </record>
+
         <record model="ir.ui.view" id="persona_uni_jon_tree_view">
             <field name="name">persona_uni_jon_tree_view</field>
             <field name="type"></field>
@@ -41,7 +42,162 @@
             <field name="view_mode"></field>
             <field name="view_type">form</field>
             <menuitem name="UniversidadJon" id="uni_jon_menu_principal"/>
-            <menuitem name="Persona" id="uni_eli_submenu" paren="uni_jon_menu_principal"/>
+            <menuitem name="Persona" id="uni_jon_submenu" paren="uni_jon_menu_principal"/>
+        </record>
+
+<!-- ======================================================================= -->
+
+        <record model="ir.ui.view" id="profesor_uni_jon_tree_view">
+            <field name="name">profesor_uni_jon_tree_view</field>
+            <field name="model">profesor.uni_jon</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="ded" />
+                    <field name="imparte_en" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="profesor_uni_jon_tree_view">
+            <field name="name">profesor_uni_jon_tree_view</field>
+            <field name="model">profesor.uni_jon</field>
+            <field name="arch" type="xml">
+                <form string="Gestión de un profesor">
+                    <sheet>
+                        <group string="Géstion de un profesor">
+                            <field name="ded"/>
+                            <field name="imparte_en"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="profesor_uni_jon_tree_view">
+            <field name="name">profesor_uni_jon_tree_view</field>
+            <field name="type"></field>
+            <field name="res_model"></field>
+            <field name="view_mode"></field>
+            <field name="view_type">form</field>
+            <menuitem name="UniversidadJon" id="uni_jon_menu_principal"/>
+            <menuitem name="Persona" id="uni_jon_submenu" paren="uni_jon_menu_principal"/>
+        </record>
+
+<!-- ====================================================================== -->
+        <record model="ir.ui.view" id="centro_uni_jon_tree_view">
+            <field name="name">centro_uni_jon_tree_view</field>
+            <field name="model">centro.uni_jon</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nombrec" />
+                    <field name="sus_alumnos" />
+                    <field name="claustro" />
+                </tree>
+            </field>
+        </record>
+
+
+        <record model="ir.ui.view" id="centro_uni_jon_tree_view">
+            <field name="name">centro_uni_jon_tree_view</field>
+            <field name="model">centro.uni_jon</field>
+            <field name="arch" type="xml">
+                <form string="Gestión de una centro">
+                    <sheet>
+                        <group string="Géstion de una centro">
+                            <field name="nombrec"/>
+                            <field name="sus_alumnos"/>
+                            <field name="claustro"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="centro_uni_jon_tree_view">
+            <field name="name">centro_uni_jon_tree_view</field>
+            <field name="type"></field>
+            <field name="res_model"></field>
+            <field name="view_mode"></field>
+            <field name="view_type">form</field>
+            <menuitem name="UniversidadJon" id="uni_jon_menu_principal"/>
+            <menuitem name="Centro" id="uni_jon_submenu" paren="uni_jon_menu_principal"/>
+        </record>
+
+<!-- ======================================================================         -->
+
+        <record model="ir.ui.view" id="alumno_uni_jon_tree_view">
+            <field name="name">alumno_uni_jon_tree_view</field>
+            <field name="model">alumno.uni_jon</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="exp" />
+                    <field name="titualacion" />
+                    <field name="su_centro" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="alumno_uni_jon_tree_view">
+            <field name="name">alumno_uni_jon_tree_view</field>
+            <field name="model">alumno.uni_jon</field>
+            <field name="arch" type="xml">
+                <form string="Gestión de una alumno">
+                    <sheet>
+                        <group string="Géstion de una alumno">
+                            <field name="exp"/>
+                            <field name="titulacion"/>
+                            <field name="su_centro"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="alumno_uni_jon_tree_view">
+            <field name="name">alumno_uni_jon_tree_view</field>
+            <field name="type"></field>
+            <field name="res_model"></field>
+            <field name="view_mode"></field>
+            <field name="view_type">form</field>
+            <menuitem name="UniversidadJon" id="uni_jon_menu_principal"/>
+            <menuitem name="Alumno" id="uni_jon_submenu" paren="uni_jon_menu_principal"/>
+        </record>
+
+<!-- ====================================================================== -->
+
+        <record model="ir.ui.view" id="personal_uni_jon_tree_view">
+            <field name="name">personal_uni_jon_tree_view</field>
+            <field name="model">personal.uni_jon</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="unidad" />
+                    <field name="categoria" />
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="personal_uni_jon_tree_view">
+            <field name="name">personal_uni_jon_tree_view</field>
+            <field name="model">personal.uni_jon</field>
+            <field name="arch" type="xml">
+                <form string="Gestión de una personal">
+                    <sheet>
+                        <group string="Géstion de una personal">
+                            <field name="unidad"/>
+                            <field name="categoria"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="personal_uni_jon_tree_view">
+            <field name="name">personal_uni_jon_tree_view</field>
+            <field name="type"></field>
+            <field name="res_model"></field>
+            <field name="view_mode"></field>
+            <field name="view_type">form</field>
+            <menuitem name="UniversidadJon" id="uni_jon_menu_principal"/>
+            <menuitem name="personal" id="uni_jon_submenu" paren="uni_jon_menu_principal"/>
         </record>
     </data>
 </odoo>
