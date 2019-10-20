@@ -8,7 +8,7 @@ class persona_uni_jon(models.Model):
     pid = fields.Char(string="Identificador", size=10, required=True, help="E,P: estudiante,profesor")
     nombre = fields.Char(string="Nombre", size=20)
     tlfno = fields.Char(string="Telefono", size=9)
-    directorio = fields.Char(string="Direccion", size=70)
+    direccion = fields.Char(string="Direccion", size=70)
     email = fields.Char(size=40)
 
 class profesor_uni_jon(models.Model):

@@ -1,60 +1,47 @@
+<? version="1.0" encoding="UTF-8"?>
+
 <odoo>
-  <data>
-    <!-- explicit list view definition -->
-    <!--
-    <record model="ir.ui.view" id="uni_jon.list">
-      <field name="name">UniJon list</field>
-      <field name="model">uni_jon.uni_jon</field>
-      <field name="arch" type="xml">
-        <tree>
-          <field name="name"/>
-          <field name="value"/>
-          <field name="value2"/>
-        </tree>
-      </field>
-    </record>
-    -->
+    <data>
 
-    <!-- actions opening views on models -->
-    <!--
-    <record model="ir.actions.act_window" id="uni_jon.action_window">
-      <field name="name">UniJon window</field>
-      <field name="res_model">uni_jon.uni_jon</field>
-      <field name="view_mode">tree,form</field>
-    </record>
-    -->
+        <!-- explicit list view definition -->
 
-    <!-- server action to the one above -->
-    <!--
-    <record model="ir.actions.server" id="uni_jon.action_server">
-      <field name="name">UniJon server</field>
-      <field name="model_id" ref="model_uni_jon_uni_jon"/>
-      <field name="state">code</field>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": self._name,
-        }
-      </field>
-    </record>
-    -->
+        <record model="ir.ui.view" id="persona_uni_jon_tree_view">
+            <field name="name">persona_uni_jon_tree_view</field>
+            <field name="model">persona.uni_jon</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="pid" />
+                    <field name="nombre" />
+                    <field name="direccion" />
+                </tree>
+            </field>
+        </record>
 
-    <!-- Top menu item -->
-    <!--
-    <menuitem name="UniJon" id="uni_jon.menu_root"/>
-    -->
-    <!-- menu categories -->
-    <!--
-    <menuitem name="Menu 1" id="uni_jon.menu_1" parent="uni_jon.menu_root"/>
-    <menuitem name="Menu 2" id="uni_jon.menu_2" parent="uni_jon.menu_root"/>
-    -->
-    <!-- actions -->
-    <!--
-    <menuitem name="List" id="uni_jon.menu_1_list" parent="uni_jon.menu_1"
-              action="uni_jon.action_window"/>
-    <menuitem name="Server to list" id="uni_jon" parent="uni_jon.menu_2"
-              action="uni_jon.action_server"/>
-    -->
-  </data>
+        <record model="ir.ui.view" id="persona_uni_jon_tree_view">
+            <field name="name">persona_uni_jon_tree_view</field>
+            <field name="model">persona.uni_jon</field>
+            <field name="arch" type="xml">
+                <form string="Gestión de una persona">
+                    <sheet>
+                        <group string="Géstion de una persona">
+                            <field name="pid"/>
+                            <field name="nombre"/>
+                            <field name="tlfno"/>
+                            <field name="direccion"/>
+                            <field name="email"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+        <record model="ir.ui.view" id="persona_uni_jon_tree_view">
+            <field name="name">persona_uni_jon_tree_view</field>
+            <field name="type"></field>
+            <field name="res_model"></field>
+            <field name="view_mode"></field>
+            <field name="view_type">form</field>
+            <menuitem name="UniversidadJon" id="uni_jon_menu_principal"/>
+            <menuitem name="Persona" id="uni_eli_submenu" paren="uni_jon_menu_principal"/>
+        </record>
+    </data>
 </odoo>

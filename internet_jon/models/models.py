@@ -5,7 +5,7 @@ from odoo import models, fields, api
 class producto_internet_jon(models.Model):
     _name = 'producto.internet_jon'
 
-    codigo = fields.Char(required=True, size=15, required=True)
+    codigo = fields.Char(required=True, size=15)
     nombre = fields.Char(string="Nombre", size=25)
     descripcion = fields.Char(string="Descripción", size=40)
     foto = fields.Binary()
@@ -26,7 +26,7 @@ class cliente_internet_jon(models.Model):
     _name = "cliente.internet_jon"
 
     usuario = fields.Char(string="Usuario", required=True, size=15)
-    nombre = fields.Char(string="Nombre", 20)
+    nombre = fields.Char(string="Nombre", size=20)
     clave = fields.Char(string="Contraseña", size=50)
     email = fields.Char(string="Email", size=50)
     
