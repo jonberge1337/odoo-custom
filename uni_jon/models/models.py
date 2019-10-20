@@ -5,23 +5,17 @@ from odoo import models, fields, api
  class persona_uni_jon(models.Model):
     _name = 'persona.uni_jon'
 
-    pid = fields.Char(string="Identificador", required=True, help="E,P: estudiante,profesor")
+    pid = fields.Char(string="Identificador", size=10, required=True, help="E,P: estudiante,profesor")
     nombre = fields.Char(string="Nombre", size=20)
     tlfno = fields.Char(string="Telefono", size=9)
     directorio = fields.Char(string="Direccion", size=70)
     email = fields.Char(size=40)
-    persona = fields.Many2one()
-
-    @api.one
-    def profesor_uno(self):
-        if len(persona) > 0:
-
 
 class profesor_uni_jon(models.Model)
     _name = "profesor.uni_jon"
 
     ded = fields.Selection(string="Dedicacion", selection=[("Completa", 1), ("Parcial", 2), ("Colaboracion", 3)], size=40)
-    imparte_en = fields.Many2many(comodel_name="centro.uni_patxi", relation="uniProfe", colum1="idprofe", colum2="idcentro")
+    imparte_en = fields.Many2many(comodel_name="centro.uni_jon", relation="uniProfe", colum1="idprofe", colum2="idcentro")
 
 class centro_uni_jon(models.Model)
     _name = "centro.uni_jon"
@@ -29,7 +23,7 @@ class centro_uni_jon(models.Model)
 
     nombrec = fields.Char(string="Nombre centro", required=True, size=40)
     sus_alumnos = fields.One2many(comodel_name="alumno.uni_jon", inverse_name="su_centro", string="Alumnos matriculados")
-    claustro = fields.Many2many(comodel_name="profesor.uni_patxi", relation="uniProfe", colum1="idcentro", colum2="idprofe")
+    claustro = fields.Many2many(comodel_name="profesor.uni_jon", relation="uniProfe", colum1="idcentro", colum2="idprofe")
 
 class alumno_uni_jon(models.Model)
     _name = "alumno.uni_jon"
