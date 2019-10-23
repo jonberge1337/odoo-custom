@@ -22,7 +22,7 @@
         <field name="arch" type="xml">
             <form string="Gestión de una producto">
                 <sheet>
-                    <group string="Géstion de una producto">
+                    <group string="Gestión de una producto">
                         <field name="codigo"/>
                         <field name="nombre"/>
                         <field name="descripcion"/>
@@ -60,7 +60,7 @@
             <field name="arch" type="xml">
                 <form string="Gestión de un lote">
                     <sheet>
-                        <group string="Géstion de un lote">
+                        <group string="Gestión de un lote">
                             <field name="catnum"/>
                             <field name="salida"/>
                             <field name="desc"/>
@@ -100,7 +100,7 @@
             <field name="arch" type="xml">
                 <form string="Gestión de una cliente">
                     <sheet>
-                        <group string="Géstion de una cliente">
+                        <group string="Gestión de una cliente">
                             <field name="usuario"/>
                             <field name="nombre"/>
                             <field name="clave"/>
@@ -139,7 +139,7 @@
             <field name="arch" type="xml">
                 <form string="Gestión de una puja">
                     <sheet>
-                        <group string="Géstion de una puja">
+                        <group string="Gestión de una puja">
                             <field name="usuario"/>
                             <field name="catnum"/>
                             <field name="dia"/>
