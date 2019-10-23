@@ -18,7 +18,7 @@ class lote_internet_jon(models.Model):
     salida = fields.Float(string="Precio de salida", digits=2)
     desc = fields.Char(string="Descripción", size=50)
     tiempo = fields.Datetime(string="Fecha")
-    productos = fields.One2many(comodel_name="producto.inverse_name", inverse_name="producto")
+    productos = fields.One2many(comodel_name="producto.internet_jon", inverse_name="pertenece")
 
 
 

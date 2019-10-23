@@ -1,0 +1,36 @@
+[2019-10-20 18:53:56.544] [exthost] [info] extension host started
+[2019-10-20 18:53:56.717] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"activationEvent":"*"}
+[2019-10-20 18:53:56.723] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/codium/resources/app/extensions/debug-auto-launch/dist/extension
+[2019-10-20 18:53:56.755] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"activationEvent":"*"}
+[2019-10-20 18:53:56.755] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/codium/resources/app/extensions/emmet/dist/extension
+[2019-10-20 18:53:57.175] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"activationEvent":"*"}
+[2019-10-20 18:53:57.175] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/codium/resources/app/extensions/git/dist/main
+[2019-10-20 18:53:57.883] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"activationEvent":"*"}
+[2019-10-20 18:53:57.883] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/codium/resources/app/extensions/merge-conflict/dist/extension
+[2019-10-20 18:53:57.899] [exthost] [info] ExtensionService#_doActivateExtension formulahendry.auto-close-tag {"startup":true,"activationEvent":"*"}
+[2019-10-20 18:53:57.899] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/jb/.vscode-oss/extensions/formulahendry.auto-close-tag-0.5.6/out/src/extension
+[2019-10-20 18:53:57.906] [exthost] [info] ExtensionService#_doActivateExtension formulahendry.auto-rename-tag {"startup":true,"activationEvent":"*"}
+[2019-10-20 18:53:57.906] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/jb/.vscode-oss/extensions/formulahendry.auto-rename-tag-0.1.0/out/src/extension
+[2019-10-20 18:53:57.914] [exthost] [info] ExtensionService#_doActivateExtension HookyQR.beautify {"startup":true,"activationEvent":"*"}
+[2019-10-20 18:53:57.914] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/jb/.vscode-oss/extensions/hookyqr.beautify-1.5.0/extension
+[2019-10-20 18:53:58.059] [exthost] [info] ExtensionService#_doActivateExtension vscodevim.vim {"startup":true,"activationEvent":"*"}
+[2019-10-20 18:53:58.060] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/jb/.vscode-oss/extensions/vscodevim.vim-1.11.2/out/extension
+[2019-10-20 18:53:58.743] [exthost] [info] eager extensions activated
+[2019-10-20 18:57:43.629] [exthost] [info] extension host started
+[2019-10-20 18:57:43.711] [exthost] [info] ExtensionService#_doActivateExtension vscode.debug-auto-launch {"startup":true,"activationEvent":"*"}
+[2019-10-20 18:57:43.720] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/codium/resources/app/extensions/debug-auto-launch/dist/extension
+[2019-10-20 18:57:43.739] [exthost] [info] ExtensionService#_doActivateExtension vscode.emmet {"startup":true,"activationEvent":"*"}
+[2019-10-20 18:57:43.740] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/codium/resources/app/extensions/emmet/dist/extension
+[2019-10-20 18:57:44.023] [exthost] [info] ExtensionService#_doActivateExtension vscode.git {"startup":true,"activationEvent":"*"}
+[2019-10-20 18:57:44.023] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/codium/resources/app/extensions/git/dist/main
+[2019-10-20 18:57:44.162] [exthost] [info] ExtensionService#_doActivateExtension vscode.merge-conflict {"startup":true,"activationEvent":"*"}
+[2019-10-20 18:57:44.164] [exthost] [info] ExtensionService#loadCommonJSModule file:///usr/share/codium/resources/app/extensions/merge-conflict/dist/extension
+[2019-10-20 18:57:44.171] [exthost] [info] ExtensionService#_doActivateExtension formulahendry.auto-close-tag {"startup":true,"activationEvent":"*"}
+[2019-10-20 18:57:44.171] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/jb/.vscode-oss/extensions/formulahendry.auto-close-tag-0.5.6/out/src/extension
+[2019-10-20 18:57:44.174] [exthost] [info] ExtensionService#_doActivateExtension formulahendry.auto-rename-tag {"startup":true,"activationEvent":"*"}
+[2019-10-20 18:57:44.174] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/jb/.vscode-oss/extensions/formulahendry.auto-rename-tag-0.1.0/out/src/extension
+[2019-10-20 18:57:44.177] [exthost] [info] ExtensionService#_doActivateExtension HookyQR.beautify {"startup":true,"activationEvent":"*"}
+[2019-10-20 18:57:44.177] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/jb/.vscode-oss/extensions/hookyqr.beautify-1.5.0/extension
+[2019-10-20 18:57:44.236] [exthost] [info] ExtensionService#_doActivateExtension vscodevim.vim {"startup":true,"activationEvent":"*"}
+[2019-10-20 18:57:44.236] [exthost] [info] ExtensionService#loadCommonJSModule file:///home/jb/.vscode-oss/extensions/vscodevim.vim-1.11.2/out/extension
+[2019-10-20 18:57:44.680] [exthost] [info] eager extensions activated
