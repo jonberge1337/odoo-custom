@@ -4,10 +4,10 @@
     <data>
         <!-- explicit list view definition -->
 <!-- ======================================================================= -->
-        <record model="ir.ui.view" id="producto_internet_jon_form_view">
-            <field name="name">producto_uni_jon_form_view</field>
+        <record model="ir.ui.view" id="producto_internet_jon_tree_view">
+            <field name="name">producto_uni_jon_tree_view</field>
             <field name="model">producto.internet_jon</field>
-            <field name="arch" type="xml"></field>
+            <field name="arch" type="xml">
             <tree>
                 <field name="codigo"/>
                 <field name="nombre"/>
@@ -16,8 +16,8 @@
         </field>
     </record>
 
-    <record model="ir.ui.view" id="producto_internet_jon_tree_view">
-        <field name="name">producto_internet_jon_tree_view</field>
+    <record model="ir.ui.view" id="producto_internet_jon_form_view">
+        <field name="name">producto_internet_jon_form_view</field>
         <field name="model">producto.internet_jon</field>
         <field name="arch" type="xml">
             <form string="Gestión de una producto">
@@ -43,8 +43,8 @@
 
 <!-- ======================================================================= -->
 
-        <record model="ir.ui.view" id="lote_internet_jon_form_view">
-            <field name="name">lote_internet_jon_form_view</field>
+        <record model="ir.ui.view" id="lote_internet_jon_tree_view">
+            <field name="name">lote_internet_jon_tree_view</field>
             <field name="model">lote.internet_jon</field>
             <field name="arch" type="xml">
                 <tree>
@@ -54,8 +54,8 @@
             </field>
         </record>
 
-        <record model="ir.ui.view" id="lote_internet_jon_tree_view">
-            <field name="name">lote_internet_jon_tree_view</field>
+        <record model="ir.ui.view" id="lote_internet_jon_form_view">
+            <field name="name">lote_internet_jon_form_view</field>
             <field name="model">lote.internet_jon</field>
             <field name="arch" type="xml">
                 <form string="Gestión de un lote">
@@ -81,8 +81,8 @@
         </record>
 
 <!-- ====================================================================== -->
-        <record model="ir.ui.view" id="cliente_internet_jon_form_view">
-            <field name="name">cliente_internet_jon_form_view</field>
+        <record model="ir.ui.view" id="cliente_internet_jon_tree_view">
+            <field name="name">cliente_internet_jon_tree_view</field>
             <field name="model">cliente.internet_jon</field>
             <field name="arch" type="xml">
                 <tree>
@@ -94,8 +94,8 @@
         </record>
 
 
-        <record model="ir.ui.view" id="cliente_internet_jon_tree_view">
-            <field name="name">cliente_internet_jon_tree_view</field>
+        <record model="ir.ui.view" id="cliente_internet_jon_form_view">
+            <field name="name">cliente_internet_jon_form_view</field>
             <field name="model">cliente.internet_jon</field>
             <field name="arch" type="xml">
                 <form string="Gestión de una cliente">
@@ -121,8 +121,8 @@
 
 <!-- ======================================================================         -->
 
-        <record model="ir.ui.view" id="puja_internet_jon_form_view">
-            <field name="name">puja_internet_jon_form_view</field>
+        <record model="ir.ui.view" id="puja_internet_jon_tree_view">
+            <field name="name">puja_internet_jon_tree_view</field>
             <field name="model">puja.internet_jon</field>
             <field name="arch" type="xml">
                 <tree>
@@ -133,8 +133,8 @@
             </field>
         </record>
 
-        <record model="ir.ui.view" id="puja_internet_jon_tree_view">
-            <field name="name">puja_internet_jon_tree_view</field>
+        <record model="ir.ui.view" id="puja_internet_jon_form_view">
+            <field name="name">puja_internet_jon_form_view</field>
             <field name="model">puja.internet_jon</field>
             <field name="arch" type="xml">
                 <form string="Gestión de una puja">
