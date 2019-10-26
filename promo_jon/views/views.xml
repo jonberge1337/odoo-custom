@@ -1,60 +1,159 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
 <odoo>
-  <data>
-    <!-- explicit list view definition -->
-    <!--
-    <record model="ir.ui.view" id="promo_jon.list">
-      <field name="name">promo_jon list</field>
-      <field name="model">promo_jon.promo_jon</field>
-      <field name="arch" type="xml">
-        <tree>
-          <field name="name"/>
-          <field name="value"/>
-          <field name="value2"/>
-        </tree>
-      </field>
-    </record>
-    -->
+    <data>
+        <record model="ir.ui.view" id="promocion_promo_jon_tree_view">
+            <field name="name">promocion_promo_jon_tree_view</field>
+            <field name="model">promocion.promo_jon</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="codigop"/>
+                    <field name="nombre"/>
+                    <field name="poblacion"/>
+                </tree>
+            </field>
+        </record>
 
-    <!-- actions opening views on models -->
-    <!--
-    <record model="ir.actions.act_window" id="promo_jon.action_window">
-      <field name="name">promo_jon window</field>
-      <field name="res_model">promo_jon.promo_jon</field>
-      <field name="view_mode">tree,form</field>
-    </record>
-    -->
+        <record model="ir.ui.view" id="promocion_promo_jon_form_view">
+            <field name="name">promocion_promo_jon_form_view</field>
+            <field name="model">promcion.internet_jon</field>
+            <field name="model" type="xml">
+                <form string="Gestión de un producto">
+                    <sheet>
+                        <group strin="Gestión de un producto">
+                            <field name="codigop"/>
+                            <field name="nombre"/>
+                            <field name="poblacion"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
 
-    <!-- server action to the one above -->
-    <!--
-    <record model="ir.actions.server" id="promo_jon.action_server">
-      <field name="name">promo_jon server</field>
-      <field name="model_id" ref="model_promo_jon_promo_jon"/>
-      <field name="state">code</field>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": self._name,
-        }
-      </field>
-    </record>
-    -->
+        <record model="ir.actions.act_window" id="promocion_promo_jon_action_view">
+            <field name="name">promocion_promo_jon_action_view</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">promocion.promo_jon</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+        </record>
 
-    <!-- Top menu item -->
-    <!--
-    <menuitem name="promo_jon" id="promo_jon.menu_root"/>
-    -->
-    <!-- menu categories -->
-    <!--
-    <menuitem name="Menu 1" id="promo_jon.menu_1" parent="promo_jon.menu_root"/>
-    <menuitem name="Menu 2" id="promo_jon.menu_2" parent="promo_jon.menu_root"/>
-    -->
-    <!-- actions -->
-    <!--
-    <menuitem name="List" id="promo_jon.menu_1_list" parent="promo_jon.menu_1"
-              action="promo_jon.action_window"/>
-    <menuitem name="Server to list" id="promo_jon" parent="promo_jon.menu_2"
-              action="promo_jon.action_server"/>
-    -->
-  </data>
+        <record model="ir.ui.view" id="contrato_promo_jon_tree_view">
+            <field name="name">contrato_promo_jon_tree_view</field>
+            <field name="model">contrato.promo_jon</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nombre"/>
+                    <field name="codigo"/>
+                    <field name="importe"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="contrato_promo_jon_form_view">
+            <field name="name">contrato_promo_jon_form_view</field>
+            <field name="model">contrato.internet_jon</field>
+            <field name="model" type="xml">
+                <form string="Gestión de un producto">
+                    <sheet>
+                        <group strin="Gestión de un producto">
+                            <field name="nombre"/>
+                            <field name="codigo"/>
+                            <field name="importe"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="contrato_promo_jon_action_view">
+            <field name="name">contrato_promo_jon_action_view</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">contrato.promo_jon</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+        </record>
+
+        <record model="ir.ui.view" id="empresa_promo_jon_tree_view">
+            <field name="name">empresa_promo_jon_tree_view</field>
+            <field name="model">empresa.promo_jon</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="nombre"/>
+                    <field name="tipo"/>
+                    <field name="dir"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="empresa_promo_jon_form_view">
+            <field name="name">empresa_promo_jon_form_view</field>
+            <field name="model">empresa.internet_jon</field>
+            <field name="model" type="xml">
+                <form string="Gestión de un producto">
+                    <sheet>
+                        <group strin="Gestión de un producto">
+                            <field name="nombre"/>
+                            <field name="tipo"/>
+                            <field name="dir"/>
+                            <field name="tfno"/>
+                            <field name="fax"/>
+                            <field name="email"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="empresa_promo_jon_action_view">
+            <field name="name">empresa_promo_jon_action_view</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">empresa.promo_jon</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+        </record>
+
+        <record model="ir.ui.view" id="vivienda_promo_jon_tree_view">
+            <field name="name">vivienda_promo_jon_tree_view</field>
+            <field name="model">vivienda.promo_jon</field>
+            <field name="arch" type="xml">
+                <tree>
+                    <field name="id"/>
+                    <field name="superficie"/>
+                    <field name="hab"/>
+                </tree>
+            </field>
+        </record>
+
+        <record model="ir.ui.view" id="vivienda_promo_jon_form_view">
+            <field name="name">vivienda_promo_jon_form_view</field>
+            <field name="model">vivienda.internet_jon</field>
+            <field name="model" type="xml">
+                <form string="Gestión de un producto">
+                    <sheet>
+                        <group strin="Gestión de un producto">
+                            <field name="id"/>
+                            <field name="superficie"/>
+                            <field name="hab"/>
+                            <field name="baños"/>
+                            <field name="plano"/>
+                            <field name="terraza"/>
+                            <field name="jardin"/>
+                            <field name="piscina"/>
+                            <field name="garaje"/>
+                            <field name="codigo"/>
+                        </group>
+                    </sheet>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="vivienda_promo_jon_action_view">
+            <field name="name">vivienda_promo_jon_action_view</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">vivienda.promo_jon</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+        </record>
+    </data>
 </odoo>
