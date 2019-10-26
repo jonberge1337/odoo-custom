@@ -16,11 +16,11 @@
 
         <record model="ir.ui.view" id="promocion_promo_jon_form_view">
             <field name="name">promocion_promo_jon_form_view</field>
-            <field name="model">promcion.internet_jon</field>
-            <field name="model" type="xml">
+            <field name="model">promocion.promo_jon</field>
+            <field name="arch" type="xml">
                 <form string="Gestión de un producto">
                     <sheet>
-                        <group strin="Gestión de un producto">
+                        <group string="Gestión de un producto">
                             <field name="codigop"/>
                             <field name="nombre"/>
                             <field name="poblacion"/>
@@ -52,11 +52,11 @@
 
         <record model="ir.ui.view" id="contrato_promo_jon_form_view">
             <field name="name">contrato_promo_jon_form_view</field>
-            <field name="model">contrato.internet_jon</field>
-            <field name="model" type="xml">
+            <field name="model">contrato.promo_jon</field>
+            <field name="arch" type="xml">
                 <form string="Gestión de un producto">
                     <sheet>
-                        <group strin="Gestión de un producto">
+                        <group string="Gestión de un producto">
                             <field name="nombre"/>
                             <field name="codigo"/>
                             <field name="importe"/>
@@ -88,11 +88,11 @@
 
         <record model="ir.ui.view" id="empresa_promo_jon_form_view">
             <field name="name">empresa_promo_jon_form_view</field>
-            <field name="model">empresa.internet_jon</field>
-            <field name="model" type="xml">
+            <field name="model">empresa.promo_jon</field>
+            <field name="arch" type="xml">
                 <form string="Gestión de un producto">
                     <sheet>
-                        <group strin="Gestión de un producto">
+                        <group string="Gestión de un producto">
                             <field name="nombre"/>
                             <field name="tipo"/>
                             <field name="dir"/>
@@ -127,11 +127,11 @@
 
         <record model="ir.ui.view" id="vivienda_promo_jon_form_view">
             <field name="name">vivienda_promo_jon_form_view</field>
-            <field name="model">vivienda.internet_jon</field>
-            <field name="model" type="xml">
+            <field name="model">vivienda.promo_jon</field>
+            <field name="arch" type="xml">
                 <form string="Gestión de un producto">
                     <sheet>
-                        <group strin="Gestión de un producto">
+                        <group string="Gestión de un producto">
                             <field name="id"/>
                             <field name="superficie"/>
                             <field name="hab"/>
