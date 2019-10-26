@@ -2,8 +2,8 @@
 
 from odoo import models, fields, api
 
-# class cebanc(models.Model):
-#     _name = 'cebanc.cebanc'
+# class promo_jon(models.Model):
+#     _name = 'promo_jon.promo_jon'
 
 #     name = fields.Char()
 #     value = fields.Integer()
