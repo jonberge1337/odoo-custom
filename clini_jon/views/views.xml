@@ -1,60 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
 <odoo>
   <data>
-    <!-- explicit list view definition -->
-    <!--
-    <record model="ir.ui.view" id="clini_jon.list">
-      <field name="name">clini_jon list</field>
-      <field name="model">clini_jon.clini_jon</field>
+  <!--TABLA DOCTOR-->
+    <record model="ir.ui.view" id="doctor_clini_jon_tree_view">
+      <field name="name">doctor.clini.jon.tree.view</field>
+      <field name="model">doctor.clini_jon</field>
       <field name="arch" type="xml">
-        <tree>
-          <field name="name"/>
-          <field name="value"/>
-          <field name="value2"/>
+        <tree string="Personal médico">
+          <field name="codigo"/>
+          <field name="nombre"/>
+          <field name="especialidad" widget="many2one"/>       
         </tree>
       </field>
     </record>
-    -->
-
-    <!-- actions opening views on models -->
-    <!--
-    <record model="ir.actions.act_window" id="clini_jon.action_window">
-      <field name="name">clini_jon window</field>
-      <field name="res_model">clini_jon.clini_jon</field>
-      <field name="view_mode">tree,form</field>
-    </record>
-    -->
-
-    <!-- server action to the one above -->
-    <!--
-    <record model="ir.actions.server" id="clini_jon.action_server">
-      <field name="name">clini_jon server</field>
-      <field name="model_id" ref="model_clini_jon_clini_jon"/>
-      <field name="state">code</field>
-      <field name="code">
-        action = {
-          "type": "ir.actions.act_window",
-          "view_mode": "tree,form",
-          "res_model": self._name,
-        }
+    <record model="ir.ui.view" id="doctor_clini_form_view">
+      <field name="name">doctor.clini.jon.form.view</field>
+      <field name="model">doctor.clini_jon</field>
+      <field name="arch" type="xml">
+        <form string="MÉDICO">
+          <group>
+              <field name="especialidad" colspan="4"/>
+          </group>
+          <group>
+              <field name="codigo"/>
+              <field name="nombre"/>
+          </group>
+          <group>
+              <field name="sus_tratamientos" colspan="4"/>
+          </group>
+        </form>
       </field>
     </record>
-    -->
 
-    <!-- Top menu item -->
-    <!--
-    <menuitem name="clini_jon" id="clini_jon.menu_root"/>
-    -->
-    <!-- menu categories -->
-    <!--
-    <menuitem name="Menu 1" id="clini_jon.menu_1" parent="clini_jon.menu_root"/>
-    <menuitem name="Menu 2" id="clini_jon.menu_2" parent="clini_jon.menu_root"/>
-    -->
-    <!-- actions -->
-    <!--
-    <menuitem name="List" id="clini_jon.menu_1_list" parent="clini_jon.menu_1"
-              action="clini_jon.action_window"/>
-    <menuitem name="Server to list" id="clini_jon" parent="clini_jon.menu_2"
-              action="clini_jon.action_server"/>
-    -->
+    <record model="ir.actions.act_window" id="doctor_clini_jon_action_view">
+      <field name="name">doctor.clini.jon.action.view</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">doctor.clini_jon</field>
+      <field name="view_mode">tree,form</field>
+      <field name="view_type">form</field>
+    </record>
+
+    <!--TABLA UNIDAD-->
+    <record model="ir.ui.view" id="unidad_clini_jon_tree_view">
+      <field name="name">unidad.clini.jon.tree.view</field>
+      <field name="model">unidad.clini_jon</field>
+      <field name="arch" type="xml">
+        <tree string="Unidades">
+          <field name="nombre"/>
+          <field name="planta"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="unidad_clini_jon_form_view">
+      <field name="name">unidad.clini.jon.form.view</field>
+      <field name="model">unidad.clini_jon</field>
+      <field name="arch" type="xml">
+        <form string="UNIDAD">
+          <group col="6">
+            <field name="idUnidad" colspan="3"/>
+            <field name="nombre" colspan="3"/>        
+          </group>
+          <group>
+            <field name="planta"/>
+          </group>
+        </form>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="unidad_clini_jon_search_view">
+      <field name="name">unidad.clini.jon.search.view</field>
+      <field name="model">unidad.clini_jon</field>
+      <field name="arch" type="xml">
+        <search>
+        <field name="idUnidad" string="unidad"
+          filter_domain="['|',('id','ilike',self),('id','ilike',self)]"/>
+       </search>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="unidad_clini_jon_action_view">
+      <field name="name">unidad.clini.jon.action.view</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">unidad.clini_jon</field>
+      <field name="view_mode">tree,form</field>
+      <field name="view_type">form</field>
+      <field name="search_view_id" ref="unidad_clini_jon_search_view"/>
+    </record>
+
+    <!--TABLA PACIENTE-->
+    <record model="ir.ui.view" id="paciente_clini_jon_tree_view">
+      <field name="name">paciente.clini.jon.tree.view</field>
+      <field name="model">paciente.clini_jon</field>
+      <field name="arch" type="xml">
+        <tree string="Pacientes">
+          <field name="ss"/>
+          <field name="nombre"/>
+          <field name="edad"/>
+          <field name="fechaIngreso"/>
+        </tree>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="paciente_clini_form_view">
+      <field name="name">paciente.clini.jon.form.view</field>
+      <field name="model">paciente.clini_jon</field>
+      <field name="arch" type="xml">
+        <form string="PACIENTE">
+          <group>
+              <field name="ss"/>
+              <field name="nombre"/>
+          </group>
+          <group>
+              <field name="edad"/>
+              <field name="fechaIngreso"/>
+          </group>
+          <group>
+              <field name="unidad"/>
+          </group>
+          <group>
+            <field name="sus_ingresos" colspan="4"/>
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="paciente_clini_jon_graph_view">
+      <field name="name">paciente.clini.jon.graph.view</field>
+      <field name="model">paciente.clini_jon</field>
+      <field name="arch" type="xml">
+        <graph string="Pacientes por edades" orientation="horizontal" type="bar">
+          <field name="ss"/>
+          <field name="edad" operator="+"/>
+        </graph>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="paciente_clini_jon_action_view">
+      <field name="name">paciente.clini.jon.action.view</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">paciente.clini_jon</field>
+      <field name="view_mode">tree,graph,form</field>
+      <field name="view_type">form</field>
+    </record>
+
+    <!--TABLA HISTORIAL-->
+    <record model="ir.ui.view" id="historial_clini_jon_tree_view">
+      <field name="name">historial.clini.jon.tree.view</field>
+      <field name="model">historial.clini_jon</field>
+      <field name="arch" type="xml">
+        <tree string="Historial de ingresos">
+          <field name="sintoma"/>
+          <field name="tratamiento"/>
+          <field name="fechaInicio"/>
+          <field name="fechaFin"/>
+        </tree>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="historial_clini_jon_form_view">
+      <field name="name">historial.clini.jon.form.view</field>
+      <field name="model">historial.clini_jon</field>
+      <field name="arch" type="xml">
+        <form string="HISTORIAL">
+          <group> 
+            <field name="paciente" colspan="4"/>
+          </group>
+          <group> 
+            <field name="doctor" colspan="4"/>
+          </group>
+          <group col="6">
+            <field name="sintoma" colspan="3"/>
+            <field name="tratamiento" colspan="3"/>
+          </group>
+          <group col="3">
+          <field name="fechaInicio"/>
+          <field name="fechaFin"/>          
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="historial_clini_jon_calendar_view">
+      <field name="name">historial.clini.jon.calendar.view</field>
+      <field name="model">historial.clini_jon</field>
+      <field name="type">calendar</field>
+      <field name="arch" type="xml">
+        <calendar string="Historial ingresos del paciente" date_start="fechaInicio" date_stop="fechaFin">
+          <field name="paciente"/>
+          <field name="doctor"/>
+        </calendar>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="historial_clini_jon_action_view">
+      <field name="name">historial.clini.jon.action.view</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">historial.clini_jon</field>
+      <field name="view_mode">tree,form,calendar</field>
+      <field name="view_type">form</field>
+    </record>
+  
+    <menuitem name="CLÍNICA jon" id="clinica"/>
+    <menuitem name="PERSONAL MÉDICO" id="medicos" parent="clinica" action="doctor_clini_jon_action_view"/>
+    <menuitem name="PACIENTES" id="pacientes" parent="clinica" action="paciente_clini_jon_action_view"/>
+    <menuitem name="OTROS DATOS DE INTERÉS" id="otros" parent="clinica"/>
+    <menuitem name="UNIDADES MÉDICAS" id="unidad" parent="otros" action="unidad_clini_jon_action_view"/>
+    <menuitem name="HISTORIAL MÉDICO DE INGRESOS" id="historial" parent="otros" action="historial_clini_jon_action_view"/>
+    
+ 
   </data>
 </odoo>
