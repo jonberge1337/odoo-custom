@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 {
-    'name': "promo_jon",
+    'name': "clini_jon",
 
     'summary': """
         Short (1 phrase/line) summary of the module's purpose, used as
@@ -18,9 +18,6 @@
     # for the full list
     'category': 'Uncategorized',
     'version': '0.1',
-    'intallable': True,
-    'auto_install': False,
-    'application': True,
 
     # any module necessary for this one to work correctly
     'depends': ['base'],
