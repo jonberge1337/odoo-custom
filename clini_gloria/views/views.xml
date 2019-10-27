@@ -1,0 +1,210 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<odoo>
+  <data>
+  <!--TABLA DOCTOR-->
+    <record model="ir.ui.view" id="doctor_clini_gloria_tree_view">
+      <field name="name">doctor.clini.gloria.tree.view</field>
+      <field name="model">doctor.clini_gloria</field>
+      <field name="arch" type="xml">
+        <tree string="Personal médico">
+          <field name="codigo"/>
+          <field name="nombre"/>
+          <field name="especialidad" widget="many2one"/>       
+        </tree>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="doctor_clini_form_view">
+      <field name="name">doctor.clini.gloria.form.view</field>
+      <field name="model">doctor.clini_gloria</field>
+      <field name="arch" type="xml">
+        <form string="MÉDICO">
+          <group>
+              <field name="especialidad" colspan="4"/>
+          </group>
+          <group>
+              <field name="codigo"/>
+              <field name="nombre"/>
+          </group>
+          <group>
+              <field name="sus_tratamientos" colspan="4"/>
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="doctor_clini_gloria_action_view">
+      <field name="name">doctor.clini.gloria.action.view</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">doctor.clini_gloria</field>
+      <field name="view_mode">tree,form</field>
+      <field name="view_type">form</field>
+    </record>
+
+    <!--TABLA UNIDAD-->
+    <record model="ir.ui.view" id="unidad_clini_gloria_tree_view">
+      <field name="name">unidad.clini.gloria.tree.view</field>
+      <field name="model">unidad.clini_gloria</field>
+      <field name="arch" type="xml">
+        <tree string="Unidades">
+          <field name="nombre"/>
+          <field name="planta"/>
+        </tree>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="unidad_clini_gloria_form_view">
+      <field name="name">unidad.clini.gloria.form.view</field>
+      <field name="model">unidad.clini_gloria</field>
+      <field name="arch" type="xml">
+        <form string="UNIDAD">
+          <group col="6">
+            <field name="idUnidad" colspan="3"/>
+            <field name="nombre" colspan="3"/>        
+          </group>
+          <group>
+            <field name="planta"/>
+          </group>
+        </form>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="unidad_clini_gloria_search_view">
+      <field name="name">unidad.clini.gloria.search.view</field>
+      <field name="model">unidad.clini_gloria</field>
+      <field name="arch" type="xml">
+        <search>
+        <field name="idUnidad" string="unidad"
+          filter_domain="['|',('id','ilike',self),('id','ilike',self)]"/>
+       </search>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="unidad_clini_gloria_action_view">
+      <field name="name">unidad.clini.gloria.action.view</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">unidad.clini_gloria</field>
+      <field name="view_mode">tree,form</field>
+      <field name="view_type">form</field>
+      <field name="search_view_id" ref="unidad_clini_gloria_search_view"/>
+    </record>
+
+    <!--TABLA PACIENTE-->
+    <record model="ir.ui.view" id="paciente_clini_gloria_tree_view">
+      <field name="name">paciente.clini.gloria.tree.view</field>
+      <field name="model">paciente.clini_gloria</field>
+      <field name="arch" type="xml">
+        <tree string="Pacientes">
+          <field name="ss"/>
+          <field name="nombre"/>
+          <field name="edad"/>
+          <field name="fechaIngreso"/>
+        </tree>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="paciente_clini_form_view">
+      <field name="name">paciente.clini.gloria.form.view</field>
+      <field name="model">paciente.clini_gloria</field>
+      <field name="arch" type="xml">
+        <form string="PACIENTE">
+          <group>
+              <field name="ss"/>
+              <field name="nombre"/>
+          </group>
+          <group>
+              <field name="edad"/>
+              <field name="fechaIngreso"/>
+          </group>
+          <group>
+              <field name="unidad"/>
+          </group>
+          <group>
+            <field name="sus_ingresos" colspan="4"/>
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="paciente_clini_gloria_graph_view">
+      <field name="name">paciente.clini.gloria.graph.view</field>
+      <field name="model">paciente.clini_gloria</field>
+      <field name="arch" type="xml">
+        <graph string="Pacientes por edades" orientation="horizontal" type="bar">
+          <field name="ss"/>
+          <field name="edad" operator="+"/>
+        </graph>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="paciente_clini_gloria_action_view">
+      <field name="name">paciente.clini.gloria.action.view</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">paciente.clini_gloria</field>
+      <field name="view_mode">tree,graph,form</field>
+      <field name="view_type">form</field>
+    </record>
+
+    <!--TABLA HISTORIAL-->
+    <record model="ir.ui.view" id="historial_clini_gloria_tree_view">
+      <field name="name">historial.clini.gloria.tree.view</field>
+      <field name="model">historial.clini_gloria</field>
+      <field name="arch" type="xml">
+        <tree string="Historial de ingresos">
+          <field name="sintoma"/>
+          <field name="tratamiento"/>
+          <field name="fechaInicio"/>
+          <field name="fechaFin"/>
+        </tree>
+      </field>
+    </record>
+    <record model="ir.ui.view" id="historial_clini_gloria_form_view">
+      <field name="name">historial.clini.gloria.form.view</field>
+      <field name="model">historial.clini_gloria</field>
+      <field name="arch" type="xml">
+        <form string="HISTORIAL">
+          <group> 
+            <field name="paciente" colspan="4"/>
+          </group>
+          <group> 
+            <field name="doctor" colspan="4"/>
+          </group>
+          <group col="6">
+            <field name="sintoma" colspan="3"/>
+            <field name="tratamiento" colspan="3"/>
+          </group>
+          <group col="3">
+          <field name="fechaInicio"/>
+          <field name="fechaFin"/>          
+          </group>
+        </form>
+      </field>
+    </record>
+
+    <record model="ir.ui.view" id="historial_clini_gloria_calendar_view">
+      <field name="name">historial.clini.gloria.calendar.view</field>
+      <field name="model">historial.clini_gloria</field>
+      <field name="type">calendar</field>
+      <field name="arch" type="xml">
+        <calendar string="Historial ingresos del paciente" date_start="fechaInicio" date_stop="fechaFin">
+          <field name="paciente"/>
+          <field name="doctor"/>
+        </calendar>
+      </field>
+    </record>
+
+    <record model="ir.actions.act_window" id="historial_clini_gloria_action_view">
+      <field name="name">historial.clini.gloria.action.view</field>
+      <field name="type">ir.actions.act_window</field>
+      <field name="res_model">historial.clini_gloria</field>
+      <field name="view_mode">tree,form,calendar</field>
+      <field name="view_type">form</field>
+    </record>
+  
+    <menuitem name="CLÍNICA GLORIA" id="clinica"/>
+    <menuitem name="PERSONAL MÉDICO" id="medicos" parent="clinica" action="doctor_clini_gloria_action_view"/>
+    <menuitem name="PACIENTES" id="pacientes" parent="clinica" action="paciente_clini_gloria_action_view"/>
+    <menuitem name="OTROS DATOS DE INTERÉS" id="otros" parent="clinica"/>
+    <menuitem name="UNIDADES MÉDICAS" id="unidad" parent="otros" action="unidad_clini_gloria_action_view"/>
+    <menuitem name="HISTORIAL MÉDICO DE INGRESOS" id="historial" parent="otros" action="historial_clini_gloria_action_view"/>
+    
+ 
+  </data>
+</odoo>
