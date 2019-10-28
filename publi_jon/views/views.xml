@@ -1,0 +1,60 @@
+<odoo>
+  <data>
+    <!-- explicit list view definition -->
+    <!--
+    <record model="ir.ui.view" id="publi_jon.list">
+      <field name="name">publi_jon list</field>
+      <field name="model">publi_jon.publi_jon</field>
+      <field name="arch" type="xml">
+        <tree>
+          <field name="name"/>
+          <field name="value"/>
+          <field name="value2"/>
+        </tree>
+      </field>
+    </record>
+    -->
+
+    <!-- actions opening views on models -->
+    <!--
+    <record model="ir.actions.act_window" id="publi_jon.action_window">
+      <field name="name">publi_jon window</field>
+      <field name="res_model">publi_jon.publi_jon</field>
+      <field name="view_mode">tree,form</field>
+    </record>
+    -->
+
+    <!-- server action to the one above -->
+    <!--
+    <record model="ir.actions.server" id="publi_jon.action_server">
+      <field name="name">publi_jon server</field>
+      <field name="model_id" ref="model_publi_jon_publi_jon"/>
+      <field name="state">code</field>
+      <field name="code">
+        action = {
+          "type": "ir.actions.act_window",
+          "view_mode": "tree,form",
+          "res_model": self._name,
+        }
+      </field>
+    </record>
+    -->
+
+    <!-- Top menu item -->
+    <!--
+    <menuitem name="publi_jon" id="publi_jon.menu_root"/>
+    -->
+    <!-- menu categories -->
+    <!--
+    <menuitem name="Menu 1" id="publi_jon.menu_1" parent="publi_jon.menu_root"/>
+    <menuitem name="Menu 2" id="publi_jon.menu_2" parent="publi_jon.menu_root"/>
+    -->
+    <!-- actions -->
+    <!--
+    <menuitem name="List" id="publi_jon.menu_1_list" parent="publi_jon.menu_1"
+              action="publi_jon.action_window"/>
+    <menuitem name="Server to list" id="publi_jon" parent="publi_jon.menu_2"
+              action="publi_jon.action_server"/>
+    -->
+  </data>
+</odoo>
