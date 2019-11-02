@@ -23,9 +23,11 @@ class sede_ong_jon(models.Model):
     direccion = fields.Char(string="Dirección", size=50)
     tfno = fields.Char(string="Telefono", size=12)
     director = fields.Char(string="Nombre del director", size=40)
+    relacion = fields.One2many(comodel_name="proyecto.ong_jon", inverse_name="cod")
 
 class proyecto_ong_jon(models.Model):
     _name = 'proyecto.ong_jon'
+    _rec_name = 'cod'
 
     cod = fields.Char(string="Código", size=20, required=True)
     titulo = fields.Char(string="Titulo", size=40)
@@ -33,12 +35,13 @@ class proyecto_ong_jon(models.Model):
     fin = fields.Date(string="Fecha final")
     presup = fields.Float(string="Presupuesto asignado", digits=2)
     resp = fields.Char(string="Nombre del responsable", size=40)
+    es_gestionado = fields.Many2one(comodel_name="sede.ong_jon")
 
 class actuacion_ong_jon(models.Model):
     _name = 'actuacion.ong_jon'
 
     cod = fields.Many2one(comodel_name="proyecto.ong_jon", string="Código del proyecto")
-    idpon = fields.Many2one(comodel_name="poblacio.ong_jon", string="Código de la población")
+    idpon = fields.Many2one(comodel_name="poblacion.ong_jon", string="Código de la población")
     inversion = fields.Float(string="Inversion", digits=2)
     descrip = fields.Char(string="Descripción", size=50)
 
