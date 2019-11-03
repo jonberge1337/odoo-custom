@@ -36,8 +36,118 @@
             <field name="view_type">form</field>
         </record>
 
-        <menuitem name="ONG JON" id="ong"/>
-        <menuitem name="SEDES ONG" id="sedes" parent="ong" action="sede_ong_jon_action_view"/>
+        <record id="proyecto_clini_tree_view" model="ir.ui.view">
+            <field name="model">proyecto.ong_jon</field>
+            <field name="arch" type="xml">
+                <tree string="proyecto">
+                    <field name="titulo"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="proyecto_clini_form_view" model="ir.ui.view">
+            <field name="model">proyecto.ong_jon</field>
+            <field name="arch" type="xml">
+                <form string="proyecto">
+                    <field name="titulo"/>
+                    <field name="inicio"/>
+                    <field name="fin"/>
+                    <field name="presup"/>
+                    <field name="resp"/>
+                    <field name="es_gestionado" widget="many2one"/>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="proyecto_ong_jon_action_view">
+            <field name="name">proyecto.ong.jon.action.view</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">proyecto.ong_jon</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+        </record>
+
+        <record id="actuacion_clini_tree_view" model="ir.ui.view">
+            <field name="model">actuacion.ong_jon</field>
+            <field name="arch" type="xml">
+                <tree string="actuacion">
+                    <field name="cod"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="actuacion_clini_form_view" model="ir.ui.view">
+            <field name="model">actuacion.ong_jon</field>
+            <field name="arch" type="xml">
+                <form string="actuacion">
+                    <field name="cod" widget="many2one"/>
+                    <field name="idpon" widget="many2one"/>
+                    <field name="inversion"/>
+                    <field name="descrip"/>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="actuacion_ong_jon_action_view">
+            <field name="name">actuacion.ong.jon.action.view</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">actuacion.ong_jon</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+        </record>
+
+        <record id="poblacion_clini_tree_view" model="ir.ui.view">
+            <field name="model">poblacion.ong_jon</field>
+            <field name="arch" type="xml">
+                <tree string="poblacion">
+                    <field name="idpob"/>
+                </tree>
+            </field>
+        </record>
+
+        <record id="poblacion_clini_form_view" model="ir.ui.view">
+            <field name="model">poblacion.ong_jon</field>
+            <field name="arch" type="xml">
+                <form string="poblacion">
+                    <field name="idpob" widget="many2one"/>
+                    <field name="nombre" widget="many2one"/>
+                    <field name="pais"/>
+                    <field name="habitantes"/>
+                </form>
+            </field>
+        </record>
+
+        <record model="ir.actions.act_window" id="poblacion_ong_jon_action_view">
+            <field name="name">poblacion.ong.jon.action.view</field>
+            <field name="type">ir.actions.act_window</field>
+            <field name="res_model">poblacion.ong_jon</field>
+            <field name="view_mode">tree,form</field>
+            <field name="view_type">form</field>
+        </record>
+
+        <menuitem name="ONG JON"
+            id="ong"/>
+        <menuitem name="SEDES ONG"
+            id="sedes"
+            parent="ong"
+            action="sede_ong_jon_action_view"/>
+        <menuitem name="PROYECTOS ONG"
+            id="proyectos"
+            parent="ong"
+            sequence="20"
+            action="proyecto_ong_jon_action_view"/>
+
+        <menuitem name="POBLACION ONG"
+            id="poblacion"
+            parent="proyectos"
+            sequence="20"
+            action="poblacion_ong_jon_action_view"/>
+
+        <menuitem name="ACTUACION ONG"
+            id="actuacion"
+            parent="poblacion"
+            sequence="20"
+            action="actuacion_ong_jon_action_view"/>
 
     </data>
 </odoo>
